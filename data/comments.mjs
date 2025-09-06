@@ -1,43 +1,32 @@
-
-export const comments = [
+export let comments = [
   {
     id: 1,
-    name: "Carey",
-    username: "cyare23",
-    email: "cy23@example.com",
-    postId: 1,
-    body: "Great article, thanks for sharing!",
+    name: "Alice Johnson",
+    username: "alicej",
+    email: "alice@example.com"
   },
   {
     id: 2,
-    name: "Mikoto",
-    username: "Miiko",
-    email: "mikoto_u@example.com",
-    postId: 1,
-    body: "I learned something new today.",
+    name: "Bob Smith",
+    username: "bobsmith",
+    email: "bob@example.com"
   },
   {
     id: 3,
-    name: "Ronald",
-    username: "RonRonRon",
-    email: "mronald@example.com",
-    postId: 2,
-    body: "Looking forward to more posts like this!",
+    name: "Charlie Brown",
+    username: "charlieb",
+    email: "charlie@example.com"
   },
   {
     id: 4,
-    name: "Sofia",
-    username: "sofia_dev",
-    email: "sofia@example.com",
-    postId: 2,
-    body: "This was really helpful, thank you!",
+    name: "Diana Prince",
+    username: "dianap",
+    email: "diana@example.com"
   },
   {
     id: 5,
-    name: "Liam",
-    username: "liam_coder",
-    email: "liam@example.com",
-    postId: 3,
-    body: "Nice explanation, it makes sense now.",
-  },
+    name: "Ethan Hunt",
+    username: "ethanh",
+    email: "ethan@example.com"
+  }
 ];
