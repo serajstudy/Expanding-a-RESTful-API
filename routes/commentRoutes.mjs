@@ -13,21 +13,21 @@ router
     res.json(comments);
   })
   .post((req, res) => {
-    const { name, username, email } = req.body;
+    const { userId,postId, body } = req.body;
 
     // Check if we have all data needed to create user
-    if (name && username && email) {
-      // check is username exists!!
-      if (comments.find((comment) => comment.username == username)) {
+    if (userId && postId&& body) {
+      // check is postId exists!!
+      if (comments.find((comment) => comment.postId == postId)) {
         res.status(400).json({ err: "Commentsname taken" });
         return;
       }
 
       const comment = {
         id: comments[comments.length - 1].id + 1, //find the last comments id number and add one to it.
-        name,
-        username,
-        email,
+       userId,
+        postId,
+        body,
       };
       comments.push(comment);
       res.json(comment);
