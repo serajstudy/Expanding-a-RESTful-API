@@ -80,6 +80,31 @@ router
     } else next();
   });
 
+
+  // @route GET /api/posts/:id/comments
+// @desc Get all comments for a specific post, optional ?userId filter
+router.get("/posts/:id/comments", (req, res) => {
+  let results = comments.filter((comment) => comment.postId == req.params.id);
+
+  if (req.query.userId) {
+    results = results.filter((comment) => comment.userId == req.query.userId);
+  }
+
+  res.json(results);
+});
+
+// @route GET /api/users/:id/comments
+// @desc Get all comments by a specific user, optional ?postId filter
+router.get("/users/:id/comments", (req, res) => {
+  let results = comments.filter((comment) => comment.userId == req.params.id);
+
+  if (req.query.postId) {
+    results = results.filter((comment) => comment.postId == req.query.postId);
+  }
+
+  res.json(results);
+});
+
 export default router;
 
 
